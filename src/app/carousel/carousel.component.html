@@ -1,0 +1,53 @@
+
+<div class="tarjeta-container" *ngFor="let item of tarjetas">
+    <div class="tarjeta-titulo">
+        {{ item.titulo }}
+    </div>
+    <div class="tarjeta-subtitulo">
+        {{ item.subtitulo }}
+    </div>
+    <!--CONTENEDOR DEL CAROUSEL. Se muestra solo si hay imágenes-->
+    <div *ngIf="images && images.length > 0" class="carousel-container">
+        <!-- 
+            CICLO FOR PARA LAS IMÁGENES QUE SE CARGAN DESDE CAROUSEL -> APP COMPONENT
+            A través de este ciclo entregamos src y alt de cada imagen, que están declarados como parte de su interfaz.
+            Cuando el indice seleccionado es = a la imagen que se está mostrando, obtiene la clase "image-active" 
+        -->
+        <img *ngFor="let image of images; let i = index" 
+            [src]="image.imageSrc" [alt]="image.imageAlt" 
+            [ngClass]="{'image-active': selectedIndex === i}"
+            class="fade">
+
+
+        <!-- CONTENEDOR DE INDICADORES -->
+        <div *ngIf="indicators" class="carousel-dot-container">
+            <!-- 
+                DENTRO DE ESTE SPAN, Y CON LOS ESTILOS, PODREMOS VER X CANTIDAD DE PUNTOS DE ACUERDO A LA X CANTIDAD DE IMÁGENES
+                AL HACER CLICK EN ALGÚN PUNTO, SE DISPARA LA FUNCION selectImage(i)
+            -->
+            <span *ngFor="let dot of images; let i = index" 
+            class="dot" 
+            [ngClass]="{'active': selectedIndex === i}"
+            (click)="selectImage(i)">
+            </span>
+        </div>
+
+        <!-- BOTONES CAROUSEL -->
+        <button *ngIf="controls" class="btn-carousel btn-prev"
+        (click)="onPrevClick()">
+            <i class="fas fa-arrow-left icon-carousel icon-prev"></i>
+        </button>
+
+        <button *ngIf="controls" class="btn-carousel btn-next"
+        (click)="onNextClick()">
+            <i class="fas fa-arrow-right icon-carousel icon-next"></i>
+        </button>
+    </div>
+
+    <div class="descripcion-container">
+        {{ item.descripcion }}
+        <h5 *ngIf="item.github"><a href="{{item.github}}" target="_blank">Ver en GitHub</a></h5>
+</div>
+
+
+

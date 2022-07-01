@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    height: 100%; 
+    width: 100%;
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    text-align: justify;
+}
+
+.navbar {
+    justify-content: space-between;
+}
+
+/*Estilo links activos*/
+.active{
+    background-color: rgba(212, 213, 214, 0.705);
+    color: black;
+    border-bottom: 2px solid rgb(32, 38, 119);
+}
+
+/*Estilos para el espacio entre paleta e items de la navbar*/
+.spacer{
+    flex: 1 1 auto;
+}
+/*PALETA DE COLORES*/
+

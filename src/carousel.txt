@@ -1,0 +1,100 @@
+<div class="container-fxLayout">
+    <!-- fxFlex en forma de fila con columnas, pero si la pantalla se vuelve más pequeña (sm, xs) pasa a ser 1 columna con filas -->
+    <div fxFlex fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+
+        <!-- Columna izquierda -> Primera fila / IMAGEN -->
+        <div fxFlex.gt-sm="50%" class="trabajoCard">
+            
+            <div id="carouselTwitterBot" class="carousel slide" data-bs-ride="carouselTwitterBot">
+
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>Twitter Bot</mat-card-title>
+                        <mat-card-subtitle>Postea imágenes cada 5 horas</mat-card-subtitle>
+                    </mat-card-header>
+                    
+                    <div class="carousel-inner imagenesCarousel">
+                        <div class="carousel-item active">
+                            <img src="./assets/portafolio/AsukaDaily1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/portafolio/AsukaDaily2.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+
+                <mat-card-content>
+                    <p>
+                      Desarrollado en JavaScript, alojada en Heroku y utilizando la API de twitter + algunas librerias externas, este bot
+                      postea imágenes cada 5 horas con hashtags y crédito a sus autores cuando corresponde. 
+                    </p>
+                  </mat-card-content>
+
+                </mat-card>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTwitterBot" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTwitterBot" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Columna derecha -> Segunda fila / DESCRIPCIÓN -->
+
+        <div fxFlex.gt-sm="50%" class="trabajoCard">
+            
+            <div id="carouselTwitterBot2" class="carousel slide" data-bs-ride="carouselTwitterBot2">
+
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>Twitter Bot</mat-card-title>
+                        <mat-card-subtitle>Postea imágenes cada 5 horas</mat-card-subtitle>
+                    </mat-card-header>
+                    
+                    <div class="carousel-inner imagenesCarousel">
+                        <div class="carousel-item active">
+                            <img src="./assets/portafolio/UNAB1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/portafolio/UNAB3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/portafolio/UNAB4.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/portafolio/UNAB5.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+
+                <mat-card-content>
+                    <p>
+                      Desarrollado en Php, con Bootstrap, JavaScript y BBDD MYSQL para la Universidad Nacional Andrés Bello. Su principal función era la de mantener actualizada
+                      y centralizada la información de su Contact Center para su fácil acceso, contando con un CRUD para supervisores y vistas básicas para usuarios
+                    </p>
+                  </mat-card-content>
+
+                </mat-card>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTwitterBot2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTwitterBot2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+        
+
+    </div>
+    
+</div>
+

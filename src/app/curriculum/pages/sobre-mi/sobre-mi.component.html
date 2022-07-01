@@ -1,0 +1,95 @@
+<h2>Sobre mi</h2>
+<hr>
+
+<!--CONTENEDOR fxLayout-->
+<div class="container-fxLayout">
+    <!-- fxFlex en forma de fila con columnas, pero si la pantalla se vuelve más pequeña (sm, xs) pasa a ser 1 columna con filas -->
+    <div fxFlex fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+
+        <!-- Columna izquierda -> Primera fila / IMAGEN -->
+        <div fxFlex.gt-sm="25%" class="sobre-mi-img">
+            <img src="./assets/piplash.png" class="imagenPerfil">
+            <div class="encuentrame">
+                <a href="https://www.linkedin.com/in/felipe-acosta-991689195/" target="_blank"><img src="./assets/linkedin.png" alt="" class="imagenEncuentrame"></a>
+                <a href="https://github.com/Piplash?tab=repositories" target="_blank"><img src="./assets/github.png" alt="" class="imagenEncuentrame"></a>
+                <a href="cv-clasico"><img src="./assets/cv.png" alt="" class="imagenEncuentrame"></a>
+            </div>
+        </div>
+
+        <!-- Columna derecha -> Segunda fila / DESCRIPCIÓN -->
+        <div fxFlex.gt-sm="75%" class="sobre-mi-desc">
+            <p>	
+                Mi nombre es Felipe Acosta y soy Desarrollador Web titulado del Instituto Profesional INACAP. Me considero una persona proactiva, comprometida y siempre dispuesta a
+                aprender y perfeccionarse. Dentro del Desarrollo Web, lo que me mueve es el Front-End y es por lo mismo que poseo conocimientos en Html, JavaScript, TypeScript, CSS, Angular y
+                Bootstrap.
+            </p>
+            <p>	
+                Me agradan los sitios sencillos, limpios y el código ordenado. La idea de intentar plasmar visualmente lo requerido, ya sea desde cero o a través de modificaciones, y ser capaz
+                de ver como el código poco a poco cobra vida, es lo que me motiva.
+            </p>
+            <p>	
+                ¿En cuanto a mi? Me gustan los gatos, el té cuando hace frío y jugar <i>souls like games</i>.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+<!--FIN CONTENEDOR fxLayout-->
+
+<h2> Información Adicional </h2>
+<hr>
+<!--CONTENEDOR fxLayout-->
+<div class="container-fxLayout">
+    <!-- fxFlex en forma de fila con columnas, pero si la pantalla se vuelve más pequeña (sm, xs) pasa a ser 1 columna con filas -->
+    <div fxFlex fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+
+        <!-- Columna izquierda -> Primera fila -->
+        <div fxFlex.gt-sm="50%" class="lista-informacion">
+            
+            <mat-list class="informacion-adicional">
+                <div mat-subheader>Contacto</div>
+            
+                <mat-list-item>
+                  <mat-icon mat-list-icon>phone_android</mat-icon>
+                  <mat-list-item role="listitem">Celular: +56 9 6352 1554</mat-list-item>
+                </mat-list-item>
+            
+                <mat-list-item>
+                    <mat-icon mat-list-icon>alternate_email</mat-icon>
+                    <mat-list-item role="listitem">Correo Electrónico: fibacosta@gmail.com</mat-list-item>
+                </mat-list-item>
+              
+            </mat-list>
+
+        </div>
+
+        <!-- Columna derecha -> Segunda fila -->
+        <div fxFlex.gt-sm="50%"  class="lista-informacion">
+            <mat-list>
+                <div mat-subheader> Personales </div>
+            
+                <mat-list-item>
+                    <mat-icon mat-list-icon>cake</mat-icon>
+                    <mat-list-item role="listitem">Fecha de Nacimiento: Abril de 1993.</mat-list-item>
+                </mat-list-item>
+                  
+                <mat-list-item>
+                    <mat-icon mat-list-icon>pin</mat-icon>
+                    <mat-list-item role="listitem">Rut: 18.294.707-5</mat-list-item>
+                </mat-list-item>
+            
+                <mat-list-item>
+                    <mat-icon mat-list-icon>home</mat-icon>
+                    <mat-list-item role="listitem">Ubicación: Región del Libertador Bernardo O'Higgins, Chile</mat-list-item>
+                </mat-list-item>
+              
+            </mat-list>
+        </div>
+
+    </div>
+
+</div>
+<!--FIN CONTENEDOR fxLayout-->
+
+

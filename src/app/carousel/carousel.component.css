@@ -1,0 +1,150 @@
+
+/*Definición de estilos de cada tarjeta y sus componentes*/
+
+.tarjeta-container{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    max-width: 700px;
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 3px 1px #dce1e1;
+}
+
+
+.tarjeta-titulo{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px;
+    padding-top: 15px;
+}
+
+.tarjeta-subtitulo{
+    font-size:15px;
+    color: grey;
+    text-align: left;
+    margin-left: 15px;
+    padding-bottom: 10px;
+}
+
+.descripcion-container{
+    text-align: justify;
+    margin: 0 auto;
+    width: 95%;
+    margin-top: 1rem;
+    padding-bottom: 10px;
+}
+
+/*Definición de estilos del contenedor del carousel*/
+
+.carousel-container{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    max-width: 700px;
+}
+
+/*Definición de estilos de las imagenes dentro del contenedor*/
+/*Especificamos que no se muestren*/
+.carousel-container img{
+    display: none;
+}
+
+/*Definición de estilos de las imágenes con el estilo image-active*/
+/*Especificamos que las imágenes con esa clase sí se muestren, que tengan un ancho de 100% y una altura de 400px fija*/
+.carousel-container img.image-active {
+    display:block;
+    width: 100%;
+}
+
+/* INDICADORES */
+
+.carousel-dot-container{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: opacity 0.6s ease;
+    opacity: 0.5;
+}
+
+.active, .dot:hover{
+    opacity: 1;
+}
+
+/*TRANSICIÓN DE IMÁGENES*/
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0.4;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*BOTONES*/
+
+.btn-carousel{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.icon-carousel{
+    color: rgb(0, 0, 0);
+    opacity: 0.3;
+    transition: all 0.15s ease;
+}
+
+.icon-carousel:hover{
+    opacity: 1;
+}
+
+.icon-carousel:active{
+    opacity: 0.3;
+}
+
+.icon-prev{
+    font-size: 40px;
+}
+
+.btn-prev{
+    left: 0;
+}
+
+.icon-next{
+    font-size: 40px;
+}
+
+.btn-next{
+    right: 0;
+}

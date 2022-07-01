@@ -1,0 +1,62 @@
+<!--NAVBAR-->
+<mat-sidenav-container>
+
+    <!--ELEMENTOS NAVBAR-->
+    <mat-toolbar class="navbar">
+        <span><a href="sobre-mi"><img src="assets/falogo.png"></a></span>
+
+        <!-- SPAN PARA DAR UN ESPACIO ENTRE EL BOTÓN Y EL RESTO DE ITEMS QUE VAN AL FINAL DE LA BARRA -->
+        <span class="spacer"></span>
+        
+        <!-- ITEMS DE LA BARRA DE NAVEGACIÓN CUANDO SE ENCUENTRA EN MODO PANTALLA COMPLETA. SI TAMAÑO DISMINUYE (fxHide.xs/sm) SE OCULTA -->
+        <nav mat-tab-nav-bar fxHide.xs fxHide.sm>
+
+            <!--NG CONTAINER para aplicar lógica de ngFor. Los items que se llenan con *ngFor están en home.component.ts -->
+            <ng-container *ngFor="let item of navItems">
+                <a routerLink={{item.link}} routerLinkActive="active" mat-tab-link>{{item.label}}</a>
+            </ng-container>
+
+        </nav>
+
+        <!-- BOTÓN OCULTO (fxHide) QUE SE MUESTRA CUANDO LA PANTALLA DISMINUYE SU TAMAÑO (fxShow.xs/sm) -->
+        <!-- EL BOTÓN ESTÁ LIGADO CON EL MENÚ DE MÁS ABAJO (dropDownOculto), Y AL HACER CLICK SE MUESTRA-->
+        <button mat-icon-button [matMenuTriggerFor]="dropDownOculto" fxHide fxShow.xs fxShow.sm>
+            <mat-icon>more_vert</mat-icon>
+        </button>
+
+        <!-- MENÚ VERTICAL QUE SE MUESTRA CUANDO SE CLICKEO EL BOTÓN SUPERIOR. FUNCIONA PARA PANTALLAS PEQUEÑAS, HACIENDO LA NAVBAR RESPONSIVE-->
+        <mat-menu #dropDownOculto="matMenu">
+
+            <mat-nav-list>
+
+                <!--NG CONTAINER para aplicar lógica de ngFor. Los items que se llenan con *ngFor están en home.component.ts -->
+                <ng-container *ngFor="let item of navItems">
+                    <a routerLink={{item.link}} mat-list-item>{{item.label}}</a>
+                </ng-container>
+
+            </mat-nav-list>
+        </mat-menu>
+        
+    </mat-toolbar>    
+</mat-sidenav-container>
+<!--FIN NAVBAR-->
+
+<!-- CONTENEDOR DEL ROUTER OUTLET CON CIERTAS ESPECIFICACIONES DE CSS PARA SU VISUALIZACIÓN -->
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+<div class="footer">
+    <div class="footer-contenido">
+        Sitio desarrollado en Angular por Felipe Acosta. <a href="https://github.com/Piplash/facosta-portafolio" target="_blank">Ver en GitHub</a>  
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
