@@ -123,4 +123,33 @@ export class PortafolioComponent  {
     }
   ]
 
+  trabajosCincoImgs = [
+    {
+      imageSrc:
+        'assets/portafolio/SmoothScrolling1.png',
+      imageAlt: 'SmoothScroll1',
+    },
+    {
+      imageSrc:
+        'assets/portafolio/SmoothScrolling2.png',
+      imageAlt: 'SmoothScroll2',
+    },
+    {
+      imageSrc:
+        'assets/portafolio/SmoothScrolling3.png',
+      imageAlt: 'SmoothScroll3',
+    }       
+  ]
+
+  trabajosCincoDesc = [
+    {
+      titulo: "Smooth Scrolling Portafolio",
+      subtitulo: "Proyecto Personal",  
+      descripcion: `
+                    Portafolio con Smooth Scrolling utilizando CSS y Html    
+                    `,
+      github: 'https://github.com/Piplash/smoothscrolling-portafolio'
+    }
+  ]
+
 }
